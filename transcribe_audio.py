@@ -12,4 +12,4 @@ def transcribe_audio(audio_file_path):
     result = mlx_whisper.transcribe(
         audio_file_path,path_or_hf_repo="whisper-bese-mlx"
     )
-    print(result["text"])
+    return(result["text"])
