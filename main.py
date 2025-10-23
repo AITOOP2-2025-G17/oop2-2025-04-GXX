@@ -9,7 +9,7 @@ main.py
 
 from record_audio import record_audio
 from transcribe_audio import transcribe_audio
-from save_text import save_transcription
+from save_text import save_str_sequential_same_dir
 import os
 
 
@@ -28,11 +28,11 @@ def main():
     print(f"✅ 録音完了: {recorded_file}")
 
     print("\n🧠  音声を文字起こししています...")
-    transcription = transcribe_audio(recorded_file)
+    transcription = transcribe_audio(audio_path)
     print(f"✅ 文字起こし結果:\n{transcription}\n")
 
     print("💾  テキストを保存しています...")
-    saved_path = save_transcription(transcription, text_dir)
+    saved_path = save_str_sequential_same_dir(transcription, text_dir)
     print(f"✅ 保存完了: {saved_path}")
 
     print("\n🌟 全処理が完了しました！")
