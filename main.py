@@ -7,7 +7,7 @@ main.py
     python main.py
 """
 
-from recorder.record_audio import record_audio
+from record_audio import record_audio
 from transcriber.transcribe_audio import transcribe_audio
 from saver.save_text import save_transcription
 import os
